@@ -1,0 +1,19 @@
+.container{
+    -fx-background-color: aqua;
+        -fx-alignment: CENTER;
+        -fx-spacing: 15;
+}
+.content {
+    -fx-font-size: 35;
+    -fx-fill: yellow;
+    -fx-stroke: red;
+    -fx-stroke-width: 2;
+}
+
+.button{
+    -fx-background-color: green;
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-padding: 10;
+    -fx-pref-width: 250;
+}
