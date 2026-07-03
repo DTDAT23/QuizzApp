@@ -1,6 +1,7 @@
 package com.dtd.quizzapp.quizzapp;
 
 import com.dtd.utils.MyAlertSingleton;
+import com.dtd.utils.MyStageSingleton;
 import com.dtd.utils.themes.ThemeTyles;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,7 +17,7 @@ public class PrimaryController implements Initializable{
     
     
     public void manageQuestion  (ActionEvent e){
-        MyAlertSingleton.getInstance().showAlert("Coming soon...");
+        MyStageSingleton.getInSingleton().showStage("");
     }
     public void practive (ActionEvent e){
         MyAlertSingleton.getInstance().showAlert("Coming soon practive");
