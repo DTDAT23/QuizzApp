@@ -5,6 +5,7 @@
 package com.dht.services.questions;
 
 import com.dht.pojo.Category;
+import com.dht.pojo.Level;
 import com.dht.pojo.Question;
 import com.dht.pojo.QuestionQueryBuilder;
 import com.dht.utils.MyConnectionSingleton;
@@ -19,19 +20,25 @@ import java.util.List;
  *
  * @author admin
  */
-public class QuestionServices {
+public class QuestionServices extends QuestionServiceBase{
     private QuestionQueryBuilder query;
 
+    public QuestionQueryBuilder getQuery() {
+        return query;
+    }
+
+    public void setQuery(QuestionQueryBuilder query) {
+        this.query = query;
+    }
+
     public QuestionServices() {
-        
     }
 
     public QuestionServices(QuestionQueryBuilder query) {
         this.query = query;
     }
     
-    
-    
+    @Override
     public List<Question> getQuestions() throws SQLException {
         PreparedStatement stm = this.query.build();
         ResultSet rs = stm.executeQuery();
